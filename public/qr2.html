@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="assets/javascripts/canvas-getsvg.js"></script>
+<script type="text/javascript" src="assets/javascripts/qrcode.js"></script>
+<script type="text/javascript" src="assets/javascripts/html5-qrcode.js"></script>
+<script type="text/javascript" src="assets/javascripts/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	function updateQRCode(text) {
+		if (document.getElementById("mode_url").checked) {
+			text = encodeURI(text);
+		}
+		var element = document.getElementById("qrcode");
+		var bodyElement = document.body;
+		if (element.lastChild) {
+			element.replaceChild(showQRCode(text, true), element.lastChild);
+			jQuery("#svg-text-output").attr("value", _SVG);
+		} else {
+			element.appendChild(showQRCode(text, true));
+			jQuery("#svg-text-output").attr("value", _SVG);
+		}
+	}
+	function svgWindow() {
+		window.open("data:text/svg+xml;charset=utf-8,"
+				+ encodeURIComponent(jQuery("#svg-text-output").attr("value")),
+				"child");
+	}
+</script>
+<title>HTML5 JavaScript QRCode Generator Example</title>
+<style type="text/css" media="screen">
+.framer {
+	display: block;
+	float: left;
+	clear: right;
+	width: 260px;
+	margin: 10px;
+	padding: 10px;
+	background-color: #D0D0D0;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#qrcode {
+	display: block;
+	float: left;
+	padding: 10px;
+	margin: 5px;
+	background-color: #FFF;
+}
+</style>
+
+</head>
+<body>
+	<form name="QRform" id="QRform">
+		<div class="framer">
+			<h3>Your Generated QRCode</h3>
+			<div id="qrcode"></div>
+		</div>
+	</form>
+	<script type="text/javascript">
+		function updateQRCode(text) {
+			text = encodeURI(text);
+			var element = document.getElementById("qrcode");
+			var bodyElement = document.body;
+			if (element.lastChild) {
+				element.replaceChild(showQRCode(text, true), element.lastChild);
+				jQuery("#svg-text-output").attr("value", _SVG);
+			} else {
+				element.appendChild(showQRCode(text, true));
+				jQuery("#svg-text-output").attr("value", _SVG);
+			}
+		}
+		updateQRCode("QR CODE TEXT")
+	</script>
+</body>
+
+
+</html>

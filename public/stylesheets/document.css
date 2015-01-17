@@ -1,0 +1,68 @@
+.tick {
+	width: 10px;
+	height: 10px;
+	vertical-align: middle
+}
+
+.tickLarge {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle
+}
+
+.oddLine {
+	border-bottom: 1px solid #680381;
+}
+
+.evenLine {
+	border-bottom: 1px solid #680381;
+}
+
+.validationFactHolder {
+	clear: both;
+	padding-top: 10px;
+}
+
+.validationFacts {
+	float: left;
+}
+.pinField {
+	font-size:170%;
+	
+}
+.pinButton{
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 160%;
+}
+.alternativeViews{
+	padding-top: 15pc;
+}
+
+.documentTd {
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.documentTh {
+	padding: 5px;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 120%;
+	border-bottom: 1px solid #680381;
+}
+
+.largeTdName, .tick {
+	color: #43038e;
+	font-weight: bold;
+	padding: 5px;
+	font-size: 200%;
+}
+
+.largeTdValue {
+	color: black;
+	padding: 5px;
+	font-size: 200%;
+}

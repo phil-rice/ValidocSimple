@@ -1,0 +1,9 @@
+.fieldDescriptionName {
+	clear: both;
+	float: left;
+	width: 150px;
+}
+
+.fieldPermissions {
+	float: left;
+}

@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="assets/javascripts/canvas-getsvg.js"></script>
+	<script type="text/javascript" src="assets/javascripts/qrcode.js"></script>
+    <script type="text/javascript" src="assets/javascripts/html5-qrcode.js"></script>
+    <script type="text/javascript" src="assets/javascripts/jquery-1.11.1.js"></script>
+		<script type="text/javascript">
+      function updateQRCode(text) {
+				if( document.getElementById("mode_url").checked ){
+        	text = encodeURI( text ); 
+				}
+				var element = document.getElementById("qrcode");
+        var bodyElement = document.body;
+        if(element.lastChild){
+          element.replaceChild(showQRCode(text, true), element.lastChild);
+					jQuery("#svg-text-output").attr("value", _SVG);
+				}else{
+							element.appendChild(showQRCode(text, true));
+					jQuery("#svg-text-output").attr("value", _SVG);
+				}
+    	}
+			function svgWindow(){
+				window.open("data:text/svg+xml;charset=utf-8," + encodeURIComponent( jQuery("#svg-text-output").attr("value") ), "child");
+			}
+    </script>
+    <title>
+      HTML5 JavaScript QRCode Generator Example
+    </title>
+    <style type="text/css" media="screen">
+			body{
+				font-family:Tahoma, Geneva, sans-serif;
+				font-size: .9em;
+			}
+			h1{
+				font-size: 1.5em;
+			}
+			h3{
+				margin-top:-5px;
+				font-size: 1.1em;
+			}
+			li{
+				padding: 5px;
+			}
+			a{
+				color:#115285;
+			}
+			.column{
+				display:block;
+				clear:none;
+				background-color:#E8E8E8;
+				margin: 10px;
+				border-radius: 10px;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+			}
+			.column_left{
+				width: 440px;
+				float:left;
+			}
+			.column_right{
+				width: 300px;
+				float:left;
+			}
+      .instructions{
+				font-size: .7em;
+				line-height: 1.1em;
+				color: #666;
+				background-color:#BCBCBC;
+				border-radius: 3px;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				margin-top:10px;
+				margin-bottom: 5px;
+				padding: 10px;
+			}
+			.blocks{
+				display:block;
+				float:left;
+				padding: 10px;
+				background-color:#CCC;
+			}
+			.framer{
+				display:block;
+				float:left;
+				clear:right;
+				width:260px;
+				margin:10px;
+				padding: 10px;
+				background-color:#D0D0D0;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+			}
+			.content{
+				width: 400px;
+			}
+			#qrcode{
+				display:block;
+				float:left;
+				padding: 10px;
+				margin: 5px;
+				background-color:#FFF;
+			}
+			#svg-text-output{
+				display:none;
+			}
+			.hide_content{
+				display:none;
+			}
+    </style>
+  </head>
+  <body>
+    <h1>
+      Dynamic QRCode Generator
+    </h1>
+    <div class="column column_left">
+    	<div class="framer content">
+    </div>
+    </div>
+    <div class="column column_right">
+    	<form name="QRform" id="QRform"> 
+      	<div class="framer">
+        <h3>1.) Message Encoding</h3>
+          <fieldset>
+            <legend>Type of Encoding</legend>
+            <input type="radio" name="mode" id="mode_text" value="text"  /> Text<br/>
+            <input type="radio" name="mode" id="mode_url" value="url" checked="checked" /> URL<br/>
+            <div class="instructions">By default, this is set to generate encoded URLs for web pages, but you could change it to text above and encode a special message instead! Select an encoding and move on to step 2 below.</div>
+          </fieldset>
+        </div>
+        <div class="framer">
+        <h3>2.) Custom URL Or Message</h3>
+          <textarea name="textField" rows="7" cols="30" onkeyup='updateQRCode(this.value)'>http://princeton.edu</textarea><br />
+          <div class="instructions">Type in your URL or custom message above and then check out your code below. As you type the QR Code will automatically update.</div>
+        </div>
+        <div class="framer">
+        	<h3>Your Generated QRCode</h3>
+            <div id="qrcode"></div>
+            <div class="instructions" style="clear:both;">
+            	Right click in the middle of the above QR Code and select "Save Image As"
+            </div>
+        </div>
+        <div class="framer">
+        	<h3>Vector Save Above QR Code</h3>
+        	<textarea id="svg-text-output" rows="7" cols="40" onclick="this.focus();this.select();"></textarea>
+          <input type="button" value="Open SVG File For Saving" onClick="svgWindow()"><br />
+        	<div class="instructions">THIS SERVICE PRIMARILY WORKS IN THE FIREFOX BROWSER: Firefox will attempt to immediately save this file.  Once it is saved, open up the containing folder and rename the file to "QR.svg" and open it in Dreamweaver to convert the color space and save as a vector for inDesign.</div>
+        </div>
+        <div class="framer">
+        <h3>This Page's QR Code</h3>
+        	<div style="display:block;width:123px; margin: 10px;">
+          	<input id="toggleQR" type="button" value="Show/Hide QRCode" style="width:123px;border:1px solid #F90;background-color:#333; color:#FF9900;" onClick="$('#QRCoded').slideToggle('fast');";/>
+           	<div id="QRCoded" style="display:none;border:1px solid #999;padding: 1px;width:119px;height:119px;"></div>
+            	<script type="text/javascript">jQuery(document).ready(function(){jQuery('#QRCoded').append(showQRCode(encodeURI(document.location),'120','120'));});</script>
+         		</div>
+        		<div class="instructions">
+          		Above is an example of a client-side autogenerated QR Code for this page.  It takes the URL
+            	of this current page and creates the code for you automatically. Click the "Show/Hide QRCode" button to have a look.
+        	</div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

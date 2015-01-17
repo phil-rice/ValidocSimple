@@ -1,0 +1,57 @@
+constraint.mustBeUrlCompatible = 
+constraint.mustBeLettersNumbersSpacesDotOrUnderscore = 
+constraint.nameMustBeUnique = 
+constraint.emailMustBeUnique =
+constraint.mustBeLettersNumbersDotUnderscoreOrComma =
+constraint.pinMustMatchExpected=
+
+email.mustBeKnown =
+
+error.emailAlreadyExists = That email is already registered. You can use "forgot password" to recover it
+error.notLegalNameComma = Please enter the name of one or more groups separated by commas without spaces
+error.notLegalName = This needs to be composed of Letters, Numbers, Space, Full stop or Underscore.
+error.nameAlreadyExists = That name already exists, please select another
+error.notLegalNameUrlCompatible=This needs to be composed of Letters, Numbers, Full Stop or Underscore without spaces. This is a name, not an email, so it must not have an @ in it.
+error.notLegalNameForCertificateSubject=This has to be simple characters: Letters, numbers, space, forward slashes, full stop or colon
+
+format.boolean =
+
+form.name = Name
+form.schemaName = Name
+form.email = Email
+form.password=Password
+form.existingPassword=Existing Password
+form.newPassword=New Password
+form.description = Description 
+form.website = Website
+form.organisation = Organisation
+form.organisationalUnit = Organisational Unit (for example department)
+form.stateOrCounty = County
+form.locale = Locale (for example village / town / city)
+form.country = Country
+form.pin = 
+
+form.bizCardUrl=Url used for experimental functions. For QR Code login "/dummyLogin/{0}/{1}/{2}" is a good value
+form.sampleSecret=A secret used to demonstrate the QR Code login story
+form.customerReferenceId=Customer Reference Number that a phone will be linked to
+
+form.qrCode=Store QR Code
+form.emailOnIssue=Email on Issue
+form.allowsAddExtraAtIssue=Allow 'Add Extra' buttons on issue
+form.isKyc=Experimental (Admin only) feature.
+form.usesCodeBook=Uses pre printed label
+certificate.meaning.bronze=This certificate is a Bronze certificate that was issued to the Validoc Group "{0}"\
+ as it is a Bronze certificate, it is 'self-signed'. You can be sure that it belongs to that Validoc Group, but cannot be \
+ certain it belongs to any real world person or organisation : a bronze certificate is 'self signed' rather than going through any approval process
+certificate.meaning.silver=This certificate is a Silver certificate that was issued to the Validoc Group "{0}"\
+ as it is a Silver certificate, Validocs have undertaken an 'on-boarding' process to verify that the Group is the real world entity that the certificate declares itself to be  
+certificate.meaning.bronzeSigning=This certificate is the one that Validoc's use to 'sign' Bronze certificates.
+certificate.meaning.silverSigning=This certificate is the one that Validoc's use to 'sign' Silver certificates.
+certificate.meaning.validocsRoot=This certificate is the Validoc root certificate
+
+facts.permissions.title= \
+	<p>These are the list of facts that documents issued from this group have used, or that you want to be able to issue documents with.</p> \
+	<p>If you want to restrict access to some of those facts, then you can do that here</p>
+
+facts.validatedFacts.title=<p>These are facts about the group that have been validated</p>
+

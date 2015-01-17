@@ -1,0 +1,42 @@
+Known bugs
+* the width of the customer key in the list of documents: If its huge then comedy ensues
+
+
+Known 'poorly implemented':
+The PDF stuff: 
+* the PDF facts shouldn't be editable in the EditSchema, they should be on the PDF section. And should do the 'pull in extra fields' as well (possibly optionally)
+* Issue document
+
+Basic Stuff
+* Paging and Find
+* Having the schemas part of the Group Card at all
+* Deleted schemas and groups
+* and what does it mean to have deleted stuff..
+
+Experimental Features
+* Import From PDFs experimental feature is very cool, but needs a status 'this is what I did' and a 'I did it' flash
+* The camera is awesome. Link to issuing documents. Sort out the life cycle of the image. Compress the image. etc
+* Aspect ratio
+* The 'kyc stuff' should probably be nuked and redone 
+
+Dog fooding results
+* We need a reissue button: takes you to the issue with the data populated (wait for document issue refactor, as hard to do right now)
+* Need 'view documents' and/or 'issue document' when viewing a document
+
+
+Desired new guis:
+"Issue/Edit Schema" major edit
+"Issue/Edit Document" major edit
+
+
+Learning from the SYCU/DC day
+1: It's quite hard to position the QR code on the PDF
+2: We !really! need reissue capability
+3: Volatile data flag needed (date for example is expected to change)
+4: When we email PDFs etc, need to give them sensible names
+5: Would quite like 'send me the PDFs of these people'
+6: We crashed at least twice with OOM requests. Once when parsing group data.
+7: It was hard to do the label printing
+
+BUT: Mostly it worked. The 'spin document' feature (soon to be part of the 'supporting documentation') was awesome
+

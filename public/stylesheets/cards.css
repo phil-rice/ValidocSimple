@@ -1,0 +1,56 @@
+.lhsCard{
+	clear: both;
+	margin: 5px;
+	margin-top: 15px;
+	padding: 0px;
+}
+.lhsCardSelected{
+	clear: both;
+	margin: 5px;
+	margin-top: 15px;
+	padding: 0px;
+}
+
+.lhsCardTitle , .lhsCardTitleSelected{
+	font-size: 120%;
+	font-weight: bold;
+	width: 100%;
+	padding: 5px;
+}
+
+.lhsCardTitleSelected > a:visited ,.lhsCardTitleSelected > a:link {
+	color:red;
+}
+
+.lhsCardBody {
+	flex-grow: 1;
+}
+
+.lhsCardSubtitle {
+	clear: both;
+	width: 100%;
+	color: black;
+	padding-left: 20px;
+	/*background-color: #f6eff4; */
+}
+
+.lhsCardSubtitleSelected {
+	clear: both;
+	color: red;
+	width: 100%;
+	padding-left: 20px;
+    box-sizing: border-box;	
+}
+.lhsCardLine,.lhsCardLineSelected {
+	clear: both;
+	width: 100%;
+	padding-left: 40px;
+}
+
+.lhsCardLineSelected {
+	color: red;
+	font-weight: bold;
+}
+.lhsCardLineSelected > a:visited ,.lhsCardLineSelected > a:link {
+	color:red;
+}

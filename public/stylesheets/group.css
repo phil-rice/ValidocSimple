@@ -1,0 +1,69 @@
+.certificateHolder{
+	display: flex;
+	clear:both;
+	padding-top: 10px;
+}
+
+.certificate {
+	padding: 5px;
+	width: 350px;
+}
+
+.groupIcon {
+	padding: 5px;
+}
+
+.groupDetailsTableDiv {
+	padding: 5px;
+}
+
+.groupListSelected {
+	color: red;
+}
+
+.validocSeal150 {
+	height: 150px;
+	clear: left;
+}
+
+.validocSeal75 {
+	height: 75px;
+	padding: 5px;
+}
+.validocSeal75Left {
+	height: 75px;
+	padding: 5px;
+	clear: left;
+	float: left;
+}
+
+.validocSealMeaning {
+	clear: both;
+	padding: 5px;
+}
+
+.certificateSubjectTable {
+	flex-grow: 1;
+}
+
+.subjectTdName {
+	color: #43038e;
+	font-weight: bold;
+	padding: 2px;
+	border-top: 1px solid #680381;
+	border-bottom: 1px solid #680381;
+}
+
+.subjectTdValue {
+	color: black;
+	padding: 2px;
+	padding-left: 12px;
+	border-top: 1px solid #680381;
+	border-bottom: 1px solid #680381;
+}
+
+.editingWillChangeSeal {
+	padding: 5px;
+	color: red;
+	
+}
